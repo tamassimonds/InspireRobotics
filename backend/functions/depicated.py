@@ -13,10 +13,7 @@ from sendgrid.helpers.mail import Mail
 app = initialize_app()
 
 
-SENDGRID_API_KEY  = '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'
 
-
-TEMPLATE_ID = 'd-16d5ece256214800bd68e17e15f7ba12'
 
 # @firestore_fn.on_document_created(document="parents/{pushId}")
 # def bookingConfirmedEmail(event: firestore_fn.Event[firestore_fn.DocumentSnapshot | None]) -> None:
