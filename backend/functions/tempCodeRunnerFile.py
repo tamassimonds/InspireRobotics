@@ -1,0 +1,1 @@
+group_sessions_into_shifts

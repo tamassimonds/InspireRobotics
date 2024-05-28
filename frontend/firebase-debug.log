@@ -1,0 +1,1349 @@
+[debug] [2024-01-30T21:49:35.890Z] ----------------------------------------------------------------------
+[debug] [2024-01-30T21:49:35.892Z] Command:       C:\node-v18.12.1-win-x64\node.exe C:\Users\tsimonds\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-01-30T21:49:35.892Z] CLI Version:   13.0.2
+[debug] [2024-01-30T21:49:35.893Z] Platform:      win32
+[debug] [2024-01-30T21:49:35.893Z] Node Version:  v18.12.1
+[debug] [2024-01-30T21:49:35.894Z] Time:          Wed Jan 31 2024 08:49:35 GMT+1100 (Australian Eastern Daylight Time)
+[debug] [2024-01-30T21:49:35.894Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-30T21:49:35.911Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-01-30T21:49:36.047Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-30T21:49:36.048Z] > authorizing via signed-in user (tamassimonds@gmail.com)
+[debug] [2024-01-30T21:49:36.048Z] [iam] checking project inspirerobotics-dev for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-30T21:49:36.049Z] > refreshing access token with scopes: []
+[debug] [2024-01-30T21:49:36.050Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-30T21:49:36.050Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-30T21:49:36.298Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-01-30T21:49:36.299Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-30T21:49:36.328Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions [none]
+[debug] [2024-01-30T21:49:36.328Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions x-goog-quota-user=projects/inspirerobotics-dev
+[debug] [2024-01-30T21:49:36.328Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-30T21:49:36.538Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-01-30T21:49:36.539Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-01-30T21:49:37.524Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions 200
+[debug] [2024-01-30T21:49:37.524Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-30T21:49:37.525Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-01-30T21:49:37.525Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-01-30T21:49:38.697Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-01-30T21:49:38.697Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-01-30T21:49:38.698Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev [none]
+[debug] [2024-01-30T21:49:39.169Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev 200
+[debug] [2024-01-30T21:49:39.170Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev {"projectId":"inspirerobotics-dev","projectNumber":"324726272921","displayName":"inspireRobotics-dev","name":"projects/inspirerobotics-dev","resources":{"hostingSite":"inspirerobotics-dev","storageBucket":"inspirerobotics-dev.appspot.com","locationId":"australia-southeast1"},"state":"ACTIVE","etag":"1_1d566b68-0dea-49ff-84bc-ddd9e9ec15fc"}
+[debug] [2024-01-30T21:49:43.876Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites pageToken=&pageSize=10
+[debug] [2024-01-30T21:49:45.326Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 200
+[debug] [2024-01-30T21:49:45.326Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites {"sites":[{"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-30T21:49:45.327Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 
+[debug] [2024-01-30T21:49:46.509Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 200
+[debug] [2024-01-30T21:49:46.509Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites {"sites":[{"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-30T21:49:46.510Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config [none]
+[debug] [2024-01-30T21:49:47.810Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config 200
+[debug] [2024-01-30T21:49:47.810Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config {"projectId":"inspirerobotics-dev","appId":"1:324726272921:web:ae17a7be94159b25061908","storageBucket":"inspirerobotics-dev.appspot.com","locationId":"australia-southeast1","apiKey":"AIzaSyBfBM_lgPXyW5hBhP459IorfXf02OhLzsY","authDomain":"inspirerobotics-dev.firebaseapp.com","messagingSenderId":"324726272921","measurementId":"G-82R80T3MYB"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-01-30T21:49:58.088Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev [none]
+[debug] [2024-01-30T21:49:59.252Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev 200
+[debug] [2024-01-30T21:49:59.252Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev {"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}
+[info]    Creating an optimized production build ...
+
+[info]  ⚠ Compiled with warnings
+
+
+[info] ./components/Table/DropDownTable.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|app-pages-browser
+    Used by 3 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\overview\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\DropDownTable.js|app-pages-browser
+    Used by 6 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/Table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\Table.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|app-pages-browser
+    Used by 27 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CTeamMembersTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5CTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CAvatar%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CBox%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButtonGroup%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCard%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardActions%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardContent%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardOverflow%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CChip%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CIconButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CSvgIcon%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CTypography%5Cindex.js&server=false!|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|app-pages-browser
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CSchoolsTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Ctable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5Cnext%5Cdist%5Cclient%5Clink.js&server=false!|app-pages-browser
+
+Import trace for requested module:
+./components/Table/Table.js
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/card/specific/ProgramDetails.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\ProgramDetails.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\programs\overview\programDetails\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\programDetails.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/card/specific/ProgramDetails.js
+./app/admin/programs/overview/programDetails/page.js
+
+./components/search/ProgramSearch.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\ProgramSearch.js|app-pages-browser
+    Used by 7 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\customQuestion\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\programSearch.js|app-pages-browser
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/search/ProgramSearch.js
+./app/admin/feedback/customQuestion/page.js
+
+./components/Table/DropDownTable.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|ssr
+    Used by 3 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\overview\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\DropDownTable.js|ssr
+    Used by 6 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|ssr
+
+Import trace for requested module:
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/Table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\Table.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|ssr
+    Used by 27 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CTeamMembersTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5CTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CAvatar%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CBox%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButtonGroup%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCard%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardActions%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardContent%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardOverflow%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CChip%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CIconButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CSvgIcon%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CTypography%5Cindex.js&server=true!|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|ssr
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CSchoolsTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Ctable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5Cnext%5Cdist%5Cclient%5Clink.js&server=true!|ssr
+
+Import trace for requested module:
+./components/Table/Table.js
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/card/specific/ProgramDetails.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\ProgramDetails.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\programs\overview\programDetails\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\programDetails.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|ssr
+
+Import trace for requested module:
+./components/card/specific/ProgramDetails.js
+./app/admin/programs/overview/programDetails/page.js
+
+./components/search/ProgramSearch.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\ProgramSearch.js|ssr
+    Used by 7 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\customQuestion\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\programSearch.js|ssr
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\page.js|ssr
+
+Import trace for requested module:
+./components/search/ProgramSearch.js
+./app/admin/feedback/customQuestion/page.js
+
+./components/table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|rsc
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\shifts\page.js|rsc
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|rsc
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\schools\holidayPrograms\page.js|rsc
+
+Import trace for requested module:
+./components/table/Table.js
+./app/employee/shifts/page.js
+
+
+[info]    Linting and checking validity of types ...
+
+[info]    Collecting page data ...
+
+[info] Initializing the default Firebase app
+
+[info] 0
+
+[info] Initializing the default Firebase app
+
+[info]    Generating static pages (0/92) ...
+
+[info] Initializing the default Firebase app
+
+[info] ReferenceError: useSearchParams is not defined
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\feedback\customQuestion\addQuestion\page.js:1:3945)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nv (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:55162)
+    at ng (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:54569)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52770)
+
+Error occurred prerendering page "/admin/feedback/customQuestion/addQuestion". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: useSearchParams is not defined
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\feedback\customQuestion\addQuestion\page.js:1:3945)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nv (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:55162)
+    at ng (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:54569)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52770)
+
+[info]  ⚠ Entire page /admin/feedback/customQuestion/questionResponses deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/feedback/customQuestion/questionResponses
+
+[info]  ⚠ Entire page /admin/inventory/kits/kitsDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/kits/kitsDetails
+
+[info]  ⚠ Entire page /admin/inventory/inventory deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/inventory
+
+[info]  ⚠ Entire page /admin/inventory/kits/addKits deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/kits/addKits
+
+[info]  ⚠ Entire page /admin/inventory/items/itemDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/items/itemDetails
+
+[info]  ⚠ Entire page /admin/inventory/locations/addLocation deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/locations/addLocation
+ ⚠ Entire page /admin/inventory/locations/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/locations/details
+
+[info]  ⚠ Entire page /admin/inventory/units/addUnit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/units/addUnit
+
+[info]    Generating static pages (23/92) 
+
+[info]  ⚠ Entire page /admin/inventory/units/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/units/details
+
+[info]  ⚠ Entire page /admin/courses/overview/addCourse deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/courses/overview/addCourse
+
+[info]  ⚠ Entire page /admin/schools/overview/addSchool deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/schools/overview/addSchool
+ ⚠ Entire page /admin/courses/overview/courseDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/courses/overview/courseDetails
+ ⚠ Entire page /admin/programs/holidayPrograms/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/holidayPrograms/details
+
+[info]  ⚠ Entire page /admin/inventory/items/addItems deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/items/addItems
+
+[info] ReferenceError: location is not defined
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:30696
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32434
+    at t.startTransition (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:59:6499)
+    at Object.push (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32421)
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\settings\page.js:1:3918)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+
+[info]  ⚠ Entire page /admin/programs/overview/programDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails
+
+[info]  ⚠ Entire page /admin/schools/overview/schoolDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/schools/overview/schoolDetails
+
+[info] 
+Error occurred prerendering page "/admin/settings". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: location is not defined
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:30696
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32434
+    at t.startTransition (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:59:6499)
+    at Object.push (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32421)
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\settings\page.js:1:3918)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+
+[info]  ⚠ Entire page /admin/programs/holidayPrograms/editProgram deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/holidayPrograms/editProgram
+
+[info]    Generating static pages (46/92) 
+
+[info]  ⚠ Entire page /admin/programs/overview/programDetails/editClass deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails/editClass
+
+[info]  ⚠ Entire page /admin/team/members/memberProfile/editPay deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile/editPay
+
+[info]  ⚠ Entire page /admin/programs/overview/programDetails/editProgram deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails/editProgram
+
+[info]  ⚠ Entire page /admin/team/members/addNewMember deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/addNewMember
+
+[info]  ⚠ Entire page /employee/courses/overview/courseDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/courses/overview/courseDetails
+
+[info]  ⚠ Entire page /employee/profile/edit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/profile/edit
+
+[info]  ⚠ Entire page /employee/feedback/ideaSubmit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/feedback/ideaSubmit
+
+[info]    Generating static pages (69/92) 
+
+[info]  ⚠ Entire page /admin/team/members/memberProfile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile
+
+[info]  ⚠ Entire page /employee/shifts/tickets/addTicket deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/shifts/tickets/addTicket
+
+[info]  ⚠ Entire page /admin/shifts/tickets/ticketProfile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/shifts/tickets/ticketProfile
+
+[info]  ⚠ Entire page /employee/team/members/profile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/team/members/profile
+
+[info]  ⚠ Entire page /employee/feedback/shiftReview/giveFeedback deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/feedback/shiftReview/giveFeedback
+
+[info]  ⚠ Entire page /admin/settings/changePaySettings deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/settings/changePaySettings
+
+[info]  ⚠ Entire page /admin/team/members/memberProfile/editInfo deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile/editInfo
+
+[info]  ⚠ Entire page /employee/programs/overview/programDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/programs/overview/programDetails
+
+[info] 0
+Initializing the default Firebase app
+
+[info]  ✓ Generating static pages (92/92) 
+
+[info] 
+
+[info] > Export encountered errors on following paths:
+	/admin/feedback/customQuestion/addQuestion/page: /admin/feedback/customQuestion/addQuestion
+	/admin/settings/page: /admin/settings
+
+[debug] [2024-01-30T21:50:31.830Z] Error: ENOENT: no such file or directory, open 'C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-01-30T21:56:21.735Z] ----------------------------------------------------------------------
+[debug] [2024-01-30T21:56:21.737Z] Command:       C:\node-v18.12.1-win-x64\node.exe C:\Users\tsimonds\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-01-30T21:56:21.737Z] CLI Version:   13.0.2
+[debug] [2024-01-30T21:56:21.738Z] Platform:      win32
+[debug] [2024-01-30T21:56:21.738Z] Node Version:  v18.12.1
+[debug] [2024-01-30T21:56:21.739Z] Time:          Wed Jan 31 2024 08:56:21 GMT+1100 (Australian Eastern Daylight Time)
+[debug] [2024-01-30T21:56:21.739Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-30T21:56:21.820Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-30T21:56:21.820Z] > authorizing via signed-in user (tamassimonds@gmail.com)
+[debug] [2024-01-30T21:56:21.820Z] [iam] checking project inspirerobotics-dev for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-30T21:56:21.823Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions [none]
+[debug] [2024-01-30T21:56:21.823Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions x-goog-quota-user=projects/inspirerobotics-dev
+[debug] [2024-01-30T21:56:21.823Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-30T21:56:23.048Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions 200
+[debug] [2024-01-30T21:56:23.048Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-30T21:56:23.049Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-01-30T21:56:23.049Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-01-30T21:56:23.624Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-01-30T21:56:23.624Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-01-30T21:56:23.625Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev [none]
+[debug] [2024-01-30T21:56:24.097Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev 200
+[debug] [2024-01-30T21:56:24.097Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev {"projectId":"inspirerobotics-dev","projectNumber":"324726272921","displayName":"inspireRobotics-dev","name":"projects/inspirerobotics-dev","resources":{"hostingSite":"inspirerobotics-dev","storageBucket":"inspirerobotics-dev.appspot.com","locationId":"australia-southeast1"},"state":"ACTIVE","etag":"1_1d566b68-0dea-49ff-84bc-ddd9e9ec15fc"}
+[debug] [2024-01-30T21:56:28.786Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites pageToken=&pageSize=10
+[debug] [2024-01-30T21:56:29.670Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 200
+[debug] [2024-01-30T21:56:29.670Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites {"sites":[{"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-30T21:56:29.671Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 
+[debug] [2024-01-30T21:56:30.864Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 200
+[debug] [2024-01-30T21:56:30.865Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites {"sites":[{"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-30T21:56:30.865Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config [none]
+[debug] [2024-01-30T21:56:32.126Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config 200
+[debug] [2024-01-30T21:56:32.126Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config {"projectId":"inspirerobotics-dev","appId":"1:324726272921:web:ae17a7be94159b25061908","storageBucket":"inspirerobotics-dev.appspot.com","locationId":"australia-southeast1","apiKey":"AIzaSyBfBM_lgPXyW5hBhP459IorfXf02OhLzsY","authDomain":"inspirerobotics-dev.firebaseapp.com","messagingSenderId":"324726272921","measurementId":"G-82R80T3MYB"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-01-30T21:56:42.116Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev [none]
+[debug] [2024-01-30T21:56:50.293Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev 200
+[debug] [2024-01-30T21:56:50.293Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev {"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}
+[info]    Creating an optimized production build ...
+
+[info]  ⚠ Compiled with warnings
+
+
+[info] ./components/Table/DropDownTable.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|app-pages-browser
+    Used by 3 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\overview\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\DropDownTable.js|app-pages-browser
+    Used by 6 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/Table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\Table.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|app-pages-browser
+    Used by 27 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CTeamMembersTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5CTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CAvatar%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CBox%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButtonGroup%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCard%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardActions%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardContent%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardOverflow%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CChip%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CIconButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CSvgIcon%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CTypography%5Cindex.js&server=false!|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|app-pages-browser
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CSchoolsTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Ctable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5Cnext%5Cdist%5Cclient%5Clink.js&server=false!|app-pages-browser
+
+Import trace for requested module:
+./components/Table/Table.js
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/card/specific/ProgramDetails.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\ProgramDetails.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\programs\overview\programDetails\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\programDetails.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/card/specific/ProgramDetails.js
+./app/admin/programs/overview/programDetails/page.js
+
+./components/search/ProgramSearch.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\ProgramSearch.js|app-pages-browser
+    Used by 7 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\customQuestion\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\programSearch.js|app-pages-browser
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/search/ProgramSearch.js
+./app/admin/feedback/customQuestion/page.js
+
+./components/Table/DropDownTable.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|ssr
+    Used by 3 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\overview\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\DropDownTable.js|ssr
+    Used by 6 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|ssr
+
+Import trace for requested module:
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/Table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\Table.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|ssr
+    Used by 27 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CTeamMembersTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5CTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CAvatar%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CBox%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButtonGroup%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCard%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardActions%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardContent%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardOverflow%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CChip%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CIconButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CSvgIcon%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CTypography%5Cindex.js&server=true!|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|ssr
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CSchoolsTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Ctable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5Cnext%5Cdist%5Cclient%5Clink.js&server=true!|ssr
+
+Import trace for requested module:
+./components/Table/Table.js
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/card/specific/ProgramDetails.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\ProgramDetails.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\programs\overview\programDetails\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\programDetails.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|ssr
+
+Import trace for requested module:
+./components/card/specific/ProgramDetails.js
+./app/admin/programs/overview/programDetails/page.js
+
+./components/search/ProgramSearch.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\ProgramSearch.js|ssr
+    Used by 7 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\customQuestion\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\programSearch.js|ssr
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\page.js|ssr
+
+Import trace for requested module:
+./components/search/ProgramSearch.js
+./app/admin/feedback/customQuestion/page.js
+
+./components/table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|rsc
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\shifts\page.js|rsc
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|rsc
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\schools\holidayPrograms\page.js|rsc
+
+Import trace for requested module:
+./components/table/Table.js
+./app/employee/shifts/page.js
+
+
+[info]    Linting and checking validity of types ...
+
+[info]    Collecting page data ...
+
+[info] Initializing the default Firebase app
+
+[info] 0
+
+[info] Initializing the default Firebase app
+
+[info]    Generating static pages (0/92) ...
+
+[info] Initializing the default Firebase app
+
+[info]  ⚠ Entire page /admin/inventory/kits/kitsDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/kits/kitsDetails
+
+[info]  ⚠ Entire page /admin/inventory/items/itemDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/items/itemDetails
+ReferenceError: useSearchParams is not defined
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\feedback\customQuestion\addQuestion\page.js:1:3945)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nv (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:55162)
+    at ng (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:54569)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52770)
+
+Error occurred prerendering page "/admin/feedback/customQuestion/addQuestion". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: useSearchParams is not defined
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\feedback\customQuestion\addQuestion\page.js:1:3945)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nv (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:55162)
+    at ng (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:54569)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52770)
+ ⚠ Entire page /admin/feedback/customQuestion/questionResponses deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/feedback/customQuestion/questionResponses
+
+[info]  ⚠ Entire page /admin/courses/overview/courseDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/courses/overview/courseDetails
+
+[info]  ⚠ Entire page /admin/inventory/locations/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/locations/details
+
+[info]  ⚠ Entire page /admin/inventory/units/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/units/details
+ ⚠ Entire page /admin/courses/overview/addCourse deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/courses/overview/addCourse
+
+[info]    Generating static pages (23/92) 
+
+[info]  ⚠ Entire page /admin/programs/overview/programDetails/editClass deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails/editClass
+
+[info]  ⚠ Entire page /admin/inventory/inventory deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/inventory
+
+[info]  ⚠ Entire page /admin/inventory/units/addUnit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/units/addUnit
+ ⚠ Entire page /admin/programs/overview/programDetails/editProgram deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails/editProgram
+ ⚠ Entire page /admin/inventory/locations/addLocation deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/locations/addLocation
+ ⚠ Entire page /admin/inventory/kits/addKits deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/kits/addKits
+
+[info]  ⚠ Entire page /admin/inventory/items/addItems deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/items/addItems
+
+[info] ReferenceError: location is not defined
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:30696
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32434
+    at t.startTransition (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:59:6499)
+    at Object.push (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32421)
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\settings\page.js:1:3918)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+
+Error occurred prerendering page "/admin/settings". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: location is not defined
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:30696
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32434
+    at t.startTransition (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:59:6499)
+    at Object.push (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32421)
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\settings\page.js:1:3918)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+ ⚠ Entire page /admin/schools/overview/schoolDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/schools/overview/schoolDetails
+ ⚠ Entire page /admin/settings/changePaySettings deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/settings/changePaySettings
+ ⚠ Entire page /admin/programs/holidayPrograms/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/holidayPrograms/details
+
+[info]    Generating static pages (46/92) 
+
+[info]  ⚠ Entire page /admin/programs/overview/programDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails
+
+[info]  ⚠ Entire page /admin/team/members/addNewMember deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/addNewMember
+
+[info]  ⚠ Entire page /admin/team/members/memberProfile/editInfo deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile/editInfo
+
+[info]  ⚠ Entire page /admin/programs/holidayPrograms/editProgram deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/holidayPrograms/editProgram
+
+[info]  ⚠ Entire page /admin/schools/overview/addSchool deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/schools/overview/addSchool
+
+[info]  ⚠ Entire page /admin/team/members/memberProfile/editPay deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile/editPay
+
+[info]  ⚠ Entire page /admin/team/members/memberProfile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile
+
+[info]  ⚠ Entire page /employee/feedback/ideaSubmit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/feedback/ideaSubmit
+
+[info]  ⚠ Entire page /employee/feedback/shiftReview/giveFeedback deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/feedback/shiftReview/giveFeedback
+
+[info]    Generating static pages (69/92) 
+
+[info]  ⚠ Entire page /employee/courses/overview/courseDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/courses/overview/courseDetails
+
+[info]  ⚠ Entire page /employee/shifts/tickets/addTicket deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/shifts/tickets/addTicket
+
+[info]  ⚠ Entire page /admin/shifts/tickets/ticketProfile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/shifts/tickets/ticketProfile
+
+[info]  ⚠ Entire page /employee/team/members/profile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/team/members/profile
+
+[info]  ⚠ Entire page /employee/profile/edit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/profile/edit
+
+[info]  ⚠ Entire page /employee/programs/overview/programDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/programs/overview/programDetails
+
+[info]  ✓ Generating static pages (92/92) 
+
+[info] 
+
+[info] > Export encountered errors on following paths:
+	/admin/feedback/customQuestion/addQuestion/page: /admin/feedback/customQuestion/addQuestion
+	/admin/settings/page: /admin/settings
+
+[debug] [2024-01-30T21:57:22.071Z] Error: ENOENT: no such file or directory, open 'C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-01-30T21:59:11.547Z] ----------------------------------------------------------------------
+[debug] [2024-01-30T21:59:11.549Z] Command:       C:\node-v18.12.1-win-x64\node.exe C:\Users\tsimonds\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-01-30T21:59:11.550Z] CLI Version:   13.1.0
+[debug] [2024-01-30T21:59:11.550Z] Platform:      win32
+[debug] [2024-01-30T21:59:11.550Z] Node Version:  v18.12.1
+[debug] [2024-01-30T21:59:11.551Z] Time:          Wed Jan 31 2024 08:59:11 GMT+1100 (Australian Eastern Daylight Time)
+[debug] [2024-01-30T21:59:11.552Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-30T21:59:11.643Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-30T21:59:11.644Z] > authorizing via signed-in user (tamassimonds@gmail.com)
+[debug] [2024-01-30T21:59:11.644Z] [iam] checking project inspirerobotics-dev for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-30T21:59:11.646Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions [none]
+[debug] [2024-01-30T21:59:11.646Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions x-goog-quota-user=projects/inspirerobotics-dev
+[debug] [2024-01-30T21:59:11.646Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-30T21:59:12.737Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions 200
+[debug] [2024-01-30T21:59:12.738Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-30T21:59:12.738Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-01-30T21:59:12.738Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-01-30T21:59:13.795Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-01-30T21:59:13.795Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-01-30T21:59:13.796Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev [none]
+[debug] [2024-01-30T21:59:14.246Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev 200
+[debug] [2024-01-30T21:59:14.247Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev {"projectId":"inspirerobotics-dev","projectNumber":"324726272921","displayName":"inspireRobotics-dev","name":"projects/inspirerobotics-dev","resources":{"hostingSite":"inspirerobotics-dev","storageBucket":"inspirerobotics-dev.appspot.com","locationId":"australia-southeast1"},"state":"ACTIVE","etag":"1_1d566b68-0dea-49ff-84bc-ddd9e9ec15fc"}
+[debug] [2024-01-30T21:59:19.100Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites pageToken=&pageSize=10
+[debug] [2024-01-30T21:59:20.311Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 200
+[debug] [2024-01-30T21:59:20.311Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites {"sites":[{"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-30T21:59:20.312Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 
+[debug] [2024-01-30T21:59:21.502Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 200
+[debug] [2024-01-30T21:59:21.502Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites {"sites":[{"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-30T21:59:21.502Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config [none]
+[debug] [2024-01-30T21:59:22.789Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config 200
+[debug] [2024-01-30T21:59:22.790Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config {"projectId":"inspirerobotics-dev","appId":"1:324726272921:web:ae17a7be94159b25061908","storageBucket":"inspirerobotics-dev.appspot.com","locationId":"australia-southeast1","apiKey":"AIzaSyBfBM_lgPXyW5hBhP459IorfXf02OhLzsY","authDomain":"inspirerobotics-dev.firebaseapp.com","messagingSenderId":"324726272921","measurementId":"G-82R80T3MYB"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-01-30T21:59:32.566Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev [none]
+[debug] [2024-01-30T21:59:33.707Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev 200
+[debug] [2024-01-30T21:59:33.707Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev {"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}
+[info]    Creating an optimized production build ...
+
+[info]  ⚠ Compiled with warnings
+
+
+[info]    Linting and checking validity of types ...
+
+[info] ./components/Table/DropDownTable.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|app-pages-browser
+    Used by 3 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\overview\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\DropDownTable.js|app-pages-browser
+    Used by 6 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/Table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\Table.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|app-pages-browser
+    Used by 27 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CTeamMembersTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5CTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CAvatar%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CBox%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButtonGroup%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCard%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardActions%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardContent%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardOverflow%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CChip%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CIconButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CSvgIcon%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CTypography%5Cindex.js&server=false!|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|app-pages-browser
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CSchoolsTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Ctable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5Cnext%5Cdist%5Cclient%5Clink.js&server=false!|app-pages-browser
+
+Import trace for requested module:
+./components/Table/Table.js
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/card/specific/ProgramDetails.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\ProgramDetails.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\programs\overview\programDetails\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\programDetails.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/card/specific/ProgramDetails.js
+./app/admin/programs/overview/programDetails/page.js
+
+./components/search/ProgramSearch.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\ProgramSearch.js|app-pages-browser
+    Used by 7 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\customQuestion\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\programSearch.js|app-pages-browser
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/search/ProgramSearch.js
+./app/admin/feedback/customQuestion/page.js
+
+./components/Table/DropDownTable.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|ssr
+    Used by 3 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\overview\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\DropDownTable.js|ssr
+    Used by 6 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|ssr
+
+Import trace for requested module:
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/Table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\Table.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|ssr
+    Used by 27 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CTeamMembersTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5CTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CAvatar%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CBox%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButtonGroup%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCard%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardActions%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardContent%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardOverflow%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CChip%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CIconButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CSvgIcon%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CTypography%5Cindex.js&server=true!|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|ssr
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CSchoolsTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Ctable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5Cnext%5Cdist%5Cclient%5Clink.js&server=true!|ssr
+
+Import trace for requested module:
+./components/Table/Table.js
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/card/specific/ProgramDetails.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\ProgramDetails.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\programs\overview\programDetails\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\programDetails.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|ssr
+
+Import trace for requested module:
+./components/card/specific/ProgramDetails.js
+./app/admin/programs/overview/programDetails/page.js
+
+./components/search/ProgramSearch.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\ProgramSearch.js|ssr
+    Used by 7 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\customQuestion\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\programSearch.js|ssr
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\page.js|ssr
+
+Import trace for requested module:
+./components/search/ProgramSearch.js
+./app/admin/feedback/customQuestion/page.js
+
+./components/table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|rsc
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\shifts\page.js|rsc
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|rsc
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\schools\holidayPrograms\page.js|rsc
+
+Import trace for requested module:
+./components/table/Table.js
+./app/employee/shifts/page.js
+
+
+[info]    Collecting page data ...
+
+[info] Initializing the default Firebase app
+
+[info] 0
+
+[info] Initializing the default Firebase app
+
+[info]    Generating static pages (0/92) ...
+
+[info] Initializing the default Firebase app
+
+[info] ReferenceError: useSearchParams is not defined
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\feedback\customQuestion\addQuestion\page.js:1:3945)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nv (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:55162)
+    at ng (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:54569)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52770)
+
+Error occurred prerendering page "/admin/feedback/customQuestion/addQuestion". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: useSearchParams is not defined
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\feedback\customQuestion\addQuestion\page.js:1:3945)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nv (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:55162)
+    at ng (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:54569)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52770)
+
+[info]  ⚠ Entire page /admin/courses/overview/courseDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/courses/overview/courseDetails
+
+[info]  ⚠ Entire page /admin/inventory/items/itemDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/items/itemDetails
+ ⚠ Entire page /admin/inventory/locations/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/locations/details
+ ⚠ Entire page /admin/inventory/inventory deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/inventory
+
+[info]    Generating static pages (23/92) 
+
+[info]  ⚠ Entire page /admin/inventory/kits/kitsDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/kits/kitsDetails
+ ⚠ Entire page /admin/inventory/kits/addKits deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/kits/addKits
+
+[info]  ⚠ Entire page /admin/inventory/units/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/units/details
+
+[info]  ⚠ Entire page /admin/inventory/items/addItems deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/items/addItems
+
+[info]  ⚠ Entire page /admin/programs/overview/programDetails/editClass deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails/editClass
+
+[info]  ⚠ Entire page /admin/schools/overview/addSchool deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/schools/overview/addSchool
+
+[info]  ⚠ Entire page /admin/schools/overview/schoolDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/schools/overview/schoolDetails
+ReferenceError: location is not defined
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:30696
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32434
+    at t.startTransition (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:59:6499)
+    at Object.push (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32421)
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\settings\page.js:1:3918)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+
+Error occurred prerendering page "/admin/settings". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: location is not defined
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:30696
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32434
+    at t.startTransition (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:59:6499)
+    at Object.push (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32421)
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\settings\page.js:1:3918)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+ ⚠ Entire page /admin/programs/holidayPrograms/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/holidayPrograms/details
+ ⚠ Entire page /admin/courses/overview/addCourse deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/courses/overview/addCourse
+
+[info]  ⚠ Entire page /admin/programs/overview/programDetails/editProgram deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails/editProgram
+
+[info]  ⚠ Entire page /admin/programs/overview/programDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails
+
+[info]    Generating static pages (46/92) 
+
+[info]  ⚠ Entire page /admin/inventory/locations/addLocation deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/locations/addLocation
+
+[info]  ⚠ Entire page /admin/programs/holidayPrograms/editProgram deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/holidayPrograms/editProgram
+
+[info]  ⚠ Entire page /admin/inventory/units/addUnit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/units/addUnit
+
+[info]  ⚠ Entire page /admin/team/members/memberProfile/editInfo deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile/editInfo
+
+[info]  ⚠ Entire page /employee/courses/overview/courseDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/courses/overview/courseDetails
+
+[info]  ⚠ Entire page /employee/feedback/shiftReview/giveFeedback deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/feedback/shiftReview/giveFeedback
+ ⚠ Entire page /employee/profile/edit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/profile/edit
+
+[info]  ⚠ Entire page /admin/settings/changePaySettings deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/settings/changePaySettings
+
+[info]  ⚠ Entire page /admin/team/members/memberProfile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile
+
+[info]    Generating static pages (69/92) 
+
+[info]  ⚠ Entire page /admin/team/members/addNewMember deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/addNewMember
+ ⚠ Entire page /admin/shifts/tickets/ticketProfile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/shifts/tickets/ticketProfile
+
+[info]  ⚠ Entire page /employee/shifts/tickets/addTicket deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/shifts/tickets/addTicket
+
+[info]  ⚠ Entire page /employee/feedback/ideaSubmit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/feedback/ideaSubmit
+ ⚠ Entire page /admin/team/members/memberProfile/editPay deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile/editPay
+
+[info]  ⚠ Entire page /employee/team/members/profile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/team/members/profile
+
+[info]  ⚠ Entire page /employee/programs/overview/programDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/programs/overview/programDetails
+
+[info]  ⚠ Entire page /admin/feedback/customQuestion/questionResponses deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/feedback/customQuestion/questionResponses
+
+[info] 0
+Initializing the default Firebase app
+ ✓ Generating static pages (92/92) 
+
+[info] 
+> Export encountered errors on following paths:
+	/admin/feedback/customQuestion/addQuestion/page: /admin/feedback/customQuestion/addQuestion
+	/admin/settings/page: /admin/settings
+
+[debug] [2024-01-30T22:00:04.803Z] Error: ENOENT: no such file or directory, open 'C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-01-30T22:02:11.421Z] ----------------------------------------------------------------------
+[debug] [2024-01-30T22:02:11.423Z] Command:       C:\node-v18.12.1-win-x64\node.exe C:\Users\tsimonds\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-01-30T22:02:11.424Z] CLI Version:   13.1.0
+[debug] [2024-01-30T22:02:11.424Z] Platform:      win32
+[debug] [2024-01-30T22:02:11.424Z] Node Version:  v18.12.1
+[debug] [2024-01-30T22:02:11.425Z] Time:          Wed Jan 31 2024 09:02:11 GMT+1100 (Australian Eastern Daylight Time)
+[debug] [2024-01-30T22:02:11.426Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-30T22:02:11.507Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-30T22:02:11.507Z] > authorizing via signed-in user (tamassimonds@gmail.com)
+[debug] [2024-01-30T22:02:11.507Z] [iam] checking project inspirerobotics-dev for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-30T22:02:11.510Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions [none]
+[debug] [2024-01-30T22:02:11.511Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions x-goog-quota-user=projects/inspirerobotics-dev
+[debug] [2024-01-30T22:02:11.511Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-30T22:02:12.806Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions 200
+[debug] [2024-01-30T22:02:12.806Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/inspirerobotics-dev:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-30T22:02:12.807Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-01-30T22:02:12.807Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-01-30T22:02:13.902Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-01-30T22:02:13.903Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/inspirerobotics-dev/serviceAccounts/inspirerobotics-dev@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-01-30T22:02:13.904Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev [none]
+[debug] [2024-01-30T22:02:14.600Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev 200
+[debug] [2024-01-30T22:02:14.600Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev {"projectId":"inspirerobotics-dev","projectNumber":"324726272921","displayName":"inspireRobotics-dev","name":"projects/inspirerobotics-dev","resources":{"hostingSite":"inspirerobotics-dev","storageBucket":"inspirerobotics-dev.appspot.com","locationId":"australia-southeast1"},"state":"ACTIVE","etag":"1_1d566b68-0dea-49ff-84bc-ddd9e9ec15fc"}
+[debug] [2024-01-30T22:02:19.241Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites pageToken=&pageSize=10
+[debug] [2024-01-30T22:02:20.582Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 200
+[debug] [2024-01-30T22:02:20.583Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites {"sites":[{"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-30T22:02:20.583Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 
+[debug] [2024-01-30T22:02:21.839Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites 200
+[debug] [2024-01-30T22:02:21.839Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites {"sites":[{"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-30T22:02:21.839Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config [none]
+[debug] [2024-01-30T22:02:22.858Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config 200
+[debug] [2024-01-30T22:02:22.858Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/inspirerobotics-dev/webApps/-/config {"projectId":"inspirerobotics-dev","appId":"1:324726272921:web:ae17a7be94159b25061908","storageBucket":"inspirerobotics-dev.appspot.com","locationId":"australia-southeast1","apiKey":"AIzaSyBfBM_lgPXyW5hBhP459IorfXf02OhLzsY","authDomain":"inspirerobotics-dev.firebaseapp.com","messagingSenderId":"324726272921","measurementId":"G-82R80T3MYB"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-01-30T22:02:32.788Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev [none]
+[debug] [2024-01-30T22:02:33.940Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev 200
+[debug] [2024-01-30T22:02:33.940Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/inspirerobotics-dev/sites/inspirerobotics-dev {"name":"projects/inspirerobotics-dev/sites/inspirerobotics-dev","defaultUrl":"https://inspirerobotics-dev.web.app","type":"DEFAULT_SITE"}
+[info]    Creating an optimized production build ...
+
+[info]  ⚠ Compiled with warnings
+
+
+[info] ./components/Table/DropDownTable.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|app-pages-browser
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\overview\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\DropDownTable.js|app-pages-browser
+    Used by 6 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/Table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\Table.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|app-pages-browser
+    Used by 27 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CTeamMembersTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5CTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CAvatar%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CBox%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButtonGroup%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCard%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardActions%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardContent%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardOverflow%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CChip%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CIconButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CSvgIcon%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CTypography%5Cindex.js&server=false!|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|app-pages-browser
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CSchoolsTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Ctable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5Cnext%5Cdist%5Cclient%5Clink.js&server=false!|app-pages-browser
+
+Import trace for requested module:
+./components/Table/Table.js
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/card/specific/ProgramDetails.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\ProgramDetails.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\programs\overview\programDetails\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\programDetails.js|app-pages-browser
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/card/specific/ProgramDetails.js
+./app/admin/programs/overview/programDetails/page.js
+
+./components/search/ProgramSearch.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\ProgramSearch.js|app-pages-browser
+    Used by 7 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\customQuestion\page.js|app-pages-browser
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\programSearch.js|app-pages-browser
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[14].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\page.js|app-pages-browser
+
+Import trace for requested module:
+./components/search/ProgramSearch.js
+./app/admin/feedback/customQuestion/page.js
+
+./components/Table/DropDownTable.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|ssr
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\overview\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\DropDownTable.js|ssr
+    Used by 6 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|ssr
+
+Import trace for requested module:
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/Table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\Table.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\Table\DropDownTable.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|ssr
+    Used by 27 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CTeamMembersTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5CTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CAvatar%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CBox%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButtonGroup%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCard%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardActions%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardContent%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CCardOverflow%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CChip%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CIconButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CSvgIcon%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CTypography%5Cindex.js&server=true!|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|ssr
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Cspecific%5CSchoolsTable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Ccomponents%5Ctable%5Ctable.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5C%40mui%5Cjoy%5Cnode%5CButton%5Cindex.js&modules=C%3A%5CUsers%5Ctsimonds%5CDesktop%5CCode%5CNext%5CInspireRoboticsBackEnd%5Cnode_modules%5Cnext%5Cdist%5Cclient%5Clink.js&server=true!|ssr
+
+Import trace for requested module:
+./components/Table/Table.js
+./components/Table/DropDownTable.js
+./app/admin/feedback/overview/page.js
+
+./components/card/specific/ProgramDetails.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\ProgramDetails.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\programs\overview\programDetails\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\card\specific\programDetails.js|ssr
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\programDetails\page.js|ssr
+
+Import trace for requested module:
+./components/card/specific/ProgramDetails.js
+./app/admin/programs/overview/programDetails/page.js
+
+./components/search/ProgramSearch.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\ProgramSearch.js|ssr
+    Used by 7 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\feedback\customQuestion\page.js|ssr
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\search\programSearch.js|ssr
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-client-module-loader.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[4].use[1]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\programs\overview\page.js|ssr
+
+Import trace for requested module:
+./components/search/ProgramSearch.js
+./app/admin/feedback/customQuestion/page.js
+
+./components/table/Table.js
+There are multiple modules with names that only differ in casing.
+This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
+Use equal casing. Compare these module identifiers:
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\Table.js|rsc
+    Used by 1 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\employee\shifts\page.js|rsc
+* javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\components\table\table.js|rsc
+    Used by 2 module(s), i. e.
+    javascript/auto|C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-flight-loader\index.js!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js??ruleSet[1].rules[15].oneOf[2].use[0]!C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\app\admin\schools\holidayPrograms\page.js|rsc
+
+Import trace for requested module:
+./components/table/Table.js
+./app/employee/shifts/page.js
+
+
+[info]    Linting and checking validity of types ...
+
+[info]    Collecting page data ...
+
+[info] Initializing the default Firebase app
+
+[info] 0
+
+[info] Initializing the default Firebase app
+
+[info]    Generating static pages (0/92) ...
+
+[info] Initializing the default Firebase app
+
+[info]  ⚠ Entire page /admin/courses/overview/courseDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/courses/overview/courseDetails
+
+[info]  ⚠ Entire page /admin/courses/overview/addCourse deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/courses/overview/addCourse
+
+[info]  ⚠ Entire page /admin/inventory/inventory deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/inventory
+
+[info]  ⚠ Entire page /admin/inventory/items/itemDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/items/itemDetails
+ ⚠ Entire page /admin/inventory/kits/kitsDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/kits/kitsDetails
+ ⚠ Entire page /admin/feedback/customQuestion/questionResponses deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/feedback/customQuestion/questionResponses
+
+[info]  ⚠ Entire page /admin/inventory/locations/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/locations/details
+
+[info] ReferenceError: useSearchParams is not defined
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\feedback\customQuestion\addQuestion\page.js:1:3945)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nv (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:55162)
+    at ng (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:54569)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52770)
+
+Error occurred prerendering page "/admin/feedback/customQuestion/addQuestion". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: useSearchParams is not defined
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\feedback\customQuestion\addQuestion\page.js:1:3945)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nv (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:55162)
+    at ng (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:54569)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52770)
+
+[info]    Generating static pages (23/92) 
+
+[info]  ⚠ Entire page /admin/inventory/units/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/units/details
+
+[info]  ⚠ Entire page /admin/inventory/items/addItems deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/items/addItems
+
+[info]  ⚠ Entire page /admin/programs/holidayPrograms/editProgram deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/holidayPrograms/editProgram
+
+[info]  ⚠ Entire page /admin/inventory/locations/addLocation deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/locations/addLocation
+
+[info]  ⚠ Entire page /admin/schools/overview/schoolDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/schools/overview/schoolDetails
+
+[info] ReferenceError: location is not defined
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:30696
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32434
+    at t.startTransition (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:59:6499)
+    at Object.push (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32421)
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\settings\page.js:1:3918)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+
+Error occurred prerendering page "/admin/settings". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: location is not defined
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:30696
+    at C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32434
+    at t.startTransition (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:59:6499)
+    at Object.push (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\chunks\4063.js:42:32421)
+    at Home (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\.next\server\app\admin\settings\page.js:1:3918)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36421)
+    at ny (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:52524)
+    at nf (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:35987)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:36572)
+    at nh (C:\Users\tsimonds\Desktop\Code\Next\InspireRoboticsBackEnd\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:27:49347)
+
+[info]  ⚠ Entire page /admin/schools/overview/addSchool deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/schools/overview/addSchool
+
+[info]    Generating static pages (46/92) 
+
+[info]  ⚠ Entire page /admin/inventory/kits/addKits deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/kits/addKits
+ ⚠ Entire page /admin/programs/holidayPrograms/details deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/holidayPrograms/details
+ ⚠ Entire page /admin/programs/overview/programDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails
+
+[info]  ⚠ Entire page /admin/inventory/units/addUnit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/inventory/units/addUnit
+
+[info]  ⚠ Entire page /admin/team/members/addNewMember deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/addNewMember
+
+[info]  ⚠ Entire page /admin/team/members/memberProfile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile
+
+[info]  ⚠ Entire page /admin/programs/overview/programDetails/editProgram deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails/editProgram
+
+[info]  ⚠ Entire page /admin/team/members/memberProfile/editPay deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile/editPay
+
+[info]  ⚠ Entire page /employee/courses/overview/courseDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/courses/overview/courseDetails
+
+[info]  ⚠ Entire page /employee/feedback/shiftReview/giveFeedback deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/feedback/shiftReview/giveFeedback
+
+[info]  ⚠ Entire page /admin/settings/changePaySettings deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/settings/changePaySettings
+
+[info]  ⚠ Entire page /employee/feedback/ideaSubmit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/feedback/ideaSubmit
+
+[info]  ⚠ Entire page /employee/profile/edit deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/profile/edit
+
+[info]    Generating static pages (69/92) 
+
+[info]  ⚠ Entire page /admin/shifts/tickets/ticketProfile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/shifts/tickets/ticketProfile
+
+[info]  ⚠ Entire page /employee/shifts/tickets/addTicket deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/shifts/tickets/addTicket
+
+[info]  ⚠ Entire page /employee/team/members/profile deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/team/members/profile
+
+[info]  ⚠ Entire page /employee/programs/overview/programDetails deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /employee/programs/overview/programDetails
+
+[info]  ⚠ Entire page /admin/programs/overview/programDetails/editClass deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/programs/overview/programDetails/editClass
+
+[info]  ⚠ Entire page /admin/team/members/memberProfile/editInfo deopted into client-side rendering. https://nextjs.org/docs/messages/deopted-into-client-rendering /admin/team/members/memberProfile/editInfo
+
+[info] 0
+Initializing the default Firebase app
+
+[info]  ✓ Generating static pages (92/92) 
+
+[info] 
+> Export encountered errors on following paths:
+	/admin/feedback/customQuestion/addQuestion/page: /admin/feedback/customQuestion/addQuestion
+	/admin/settings/page: /admin/settings
+
+[debug] [2024-01-30T22:03:16.432Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\tsimonds\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:258:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.

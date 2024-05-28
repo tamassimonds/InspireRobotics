@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "noEmitOnError": false, // Emit files even if there are type errors
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "strict": false, // Disable strict type checking
+    "noEmit": false, // This needs to be false to emit output files
+    "incremental": true, // Enable incremental compilation
+    "esModuleInterop": true, // Enable ES module interop
+    "module": "esnext", // Set the module system
+    "moduleResolution": "node", // Use node module resolution strategy
+    "resolveJsonModule": true, // Include JSON files
+    "isolatedModules": true, // Transpile each file as a separate module (similar to 'ts.transpileModule').
+    "jsx": "preserve", // Preserve JSX during compilation
+    "downlevelIteration": true // Provide full support for iterables in 'for-of', spread, and destructuring
+
+    ,
+    "checkJs": false,
+
+    "noImplicitAny": false,
+    
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/**/*.jsx",
+    "app/admin/dashboard/main/page.js",
+    "lib/firebase/signInFirebase.js"
+, "lib/firebase/handlePayCalculation.js", "components/form/GenericForm.js", "app/admin/courses/overview/courseDetails/addCurriculum/page.tsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
