@@ -53,12 +53,6 @@ for doc in documents:
 
 
 
-SENDGRID_API_KEY  = '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'
-
-
-TEMPLATE_ID = 'd-3694855ff59a422cb7bb39b316b40a04'
-
-
 alreadySent = []
 
 for data in parentPrograms:

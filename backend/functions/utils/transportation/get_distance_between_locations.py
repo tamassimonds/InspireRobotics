@@ -12,9 +12,6 @@ import requests
 from utils.transportation.address_to_geocode import AddressToGeocode
 from utils.transportation.route import Route
 
-HERE_API_KEY = "TecZa84n1w9m8-sJ-PpF063n1jC6MJzsYsXjitp_xjA"
-
-
 
 
 def calculate_route(origin_address, destination_address):
